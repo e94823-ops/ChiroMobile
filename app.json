@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Stitch Chiro Patient",
+    "slug": "stitch-chiro-patient",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#11b4d4"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.stitchchiro.patient"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#11b4d4"
+      },
+      "package": "com.stitchchiro.patient"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

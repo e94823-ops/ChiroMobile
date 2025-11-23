@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payment Methods</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#11b4d4",
+              "background-light": "#f6f8f8",
+              "background-dark": "#101f22",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex h-14 items-center justify-between border-b border-slate-200/80 bg-background-light/80 px-4 backdrop-blur-sm dark:border-slate-800/80 dark:bg-background-dark/80">
+<button class="flex size-10 items-center justify-center text-slate-800 dark:text-slate-200">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-lg font-semibold text-slate-900 dark:text-slate-100">Payment Methods</h1>
+<div class="size-10"></div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-4 py-6">
+<div class="flex flex-col gap-4">
+<!-- List Item 1: Default Card -->
+<div class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-sm dark:bg-slate-900/50">
+<div class="flex h-10 w-16 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-800">
+<img class="h-4" data-alt="Visa logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNPkjoAIZRh6pn0fawWUWWamHVjNsPxlw_i8oZqAtPHbR2bND2ybq7SwxWhzw6p4E71zhZ3CrJJFwngERik_6kZRtE3geljtFv-HbkJy-D936sbKuiHicaEoy-JwVfbM9n6kANm2HKGvr-NH1nojfIOkbAmK_4YBpt3B7MY62VtbeiDIay3Rod_YAe227tOxklM5o14o6e9QKq4IQqOw7UXF0E0ZW-DN7KktiqTCKzju0db-GUZ9q1Ws8GTYym2kTok0w-dVFousCL"/>
+</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="font-medium text-slate-800 dark:text-slate-200">Visa ending in 4242</p>
+<p class="text-sm text-primary dark:text-primary/90">Default</p>
+</div>
+<div class="shrink-0">
+<button class="flex size-10 items-center justify-center rounded-full text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-2xl">more_vert</span>
+</button>
+</div>
+</div>
+<!-- List Item 2: Another Card -->
+<div class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-sm dark:bg-slate-900/50">
+<div class="flex h-10 w-16 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-800">
+<img class="h-6" data-alt="Mastercard logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh9nGhogSYGTPNpu8A_Hp3r3hGwmCHv1PIURg-rmTDSm5KOTQD0KHbFxN2168vSFOqAEYn73LkuNBFiWA95-K-qgPDkphXjR_YRfWgD8cnSMNdhY2v4nqr7Xu1WRR6udveFDWy_KuVSTVyRyb0HZQLj3q1F-PCRXF1gB_XkhSqEvls4zigZlvEMZIIbRHrYyStQLjbiVzPdPexkApLogSmc9H8honoeQnS7ZPtYQwFImU1RKHxer9E1n-hLzy5zO0JCng_zfFRssN0"/>
+</div>
+<div class="flex-1">
+<p class="font-medium text-slate-800 dark:text-slate-200">Mastercard ending in 1234</p>
+</div>
+<div class="shrink-0">
+<button class="flex size-10 items-center justify-center rounded-full text-slate-600 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined text-2xl">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Security Message -->
+<div class="mt-8 flex items-center justify-center gap-2 text-center">
+<span class="material-symbols-outlined text-base text-slate-500 dark:text-slate-400">lock</span>
+<p class="text-xs text-slate-500 dark:text-slate-400">Your payment information is stored securely.</p>
+</div>
+</main>
+<!-- Bottom CTA Button -->
+<footer class="sticky bottom-0 bg-gradient-to-t from-background-light to-transparent px-4 pb-6 pt-4 dark:from-background-dark">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-primary py-3.5 text-base font-bold text-white shadow-lg shadow-primary/20 transition-transform duration-200 ease-in-out hover:scale-[1.02] active:scale-[0.98]">
+<span class="truncate">Add New Card</span>
+</button>
+</footer>
+</div>
+</body></html>

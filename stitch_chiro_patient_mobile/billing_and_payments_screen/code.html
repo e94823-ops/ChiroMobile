@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Billing &amp; Payments</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#4A90E2",
+              "background-light": "#F2F2F7",
+              "background-dark": "#101f22",
+              "text-light": "#0D0D0D",
+              "text-dark": "#F2F2F7",
+              "secondary-light": "#E9E9F0",
+              "secondary-dark": "#2C3A3D",
+              "success": "#50B86A",
+              "alert": "#E97451",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="flex items-center p-4 pb-2 justify-between bg-background-light dark:bg-background-dark sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h1 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center -ml-12">Billing &amp; Payments</h1>
+</header>
+<main class="flex-1 px-4">
+<!-- Summary Card -->
+<section class="mt-4">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-white dark:bg-secondary-dark p-6">
+<p class="text-sm font-normal leading-normal text-text-light/70 dark:text-text-dark/70">Current Balance Due</p>
+<p class="text-4xl font-bold leading-tight tracking-tighter mt-1">$150.00</p>
+<p class="text-alert text-sm font-medium mt-2">Due by 30 Aug 2024</p>
+<button class="flex w-full mt-6 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-white text-base font-medium leading-normal shadow-sm">
+<span class="truncate">Pay Now</span>
+</button>
+<div class="flex items-center justify-center gap-2 mt-4">
+<span class="material-symbols-outlined text-sm text-text-light/50 dark:text-text-dark/50">lock</span>
+<p class="text-xs text-text-light/50 dark:text-text-dark/50">Secure Payments</p>
+</div>
+</div>
+</section>
+<!-- Invoice History Section -->
+<section class="mt-8">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Invoice History</h2>
+<!-- Chips -->
+<div class="flex gap-3 pt-4 overflow-x-auto pb-2 -mx-4 px-4">
+<div class="flex h-8 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-primary/20 pl-4 pr-4">
+<p class="text-primary text-sm font-medium leading-normal">All</p>
+</div>
+<div class="flex h-8 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-secondary-light dark:bg-secondary-dark pl-4 pr-4">
+<p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">Unpaid</p>
+</div>
+<div class="flex h-8 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-secondary-light dark:bg-secondary-dark pl-4 pr-4">
+<p class="text-text-light dark:text-text-dark text-sm font-medium leading-normal">Paid</p>
+</div>
+</div>
+<!-- Invoice List -->
+<div class="flex flex-col gap-2 mt-4">
+<!-- ListItem Overdue -->
+<div class="flex items-center gap-4 bg-white dark:bg-secondary-dark p-3 rounded-lg min-h-[72px] justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-secondary-light dark:bg-background-dark shrink-0 size-12">
+<span class="material-symbols-outlined text-alert">receipt_long</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-base font-medium leading-normal line-clamp-1">Invoice #CHIRO-0284</p>
+<p class="text-sm font-normal leading-normal line-clamp-2 text-text-light/70 dark:text-text-dark/70">Service Date: 15 July 2024</p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<p class="font-bold">$75.00</p>
+<div class="flex items-center justify-center rounded-full px-2 py-0.5 mt-1 bg-alert/10">
+<p class="text-alert text-xs font-medium">Overdue</p>
+</div>
+</div>
+</div>
+<!-- ListItem Due -->
+<div class="flex items-center gap-4 bg-white dark:bg-secondary-dark p-3 rounded-lg min-h-[72px] justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-secondary-light dark:bg-background-dark shrink-0 size-12">
+<span class="material-symbols-outlined text-alert">receipt_long</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-base font-medium leading-normal line-clamp-1">Invoice #CHIRO-0283</p>
+<p class="text-sm font-normal leading-normal line-clamp-2 text-text-light/70 dark:text-text-dark/70">Service Date: 01 Aug 2024</p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<p class="font-bold">$75.00</p>
+<div class="flex items-center justify-center rounded-full px-2 py-0.5 mt-1 bg-alert/10">
+<p class="text-alert text-xs font-medium">Due</p>
+</div>
+</div>
+</div>
+<!-- ListItem Paid -->
+<div class="flex items-center gap-4 bg-white dark:bg-secondary-dark p-3 rounded-lg min-h-[72px] justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-secondary-light dark:bg-background-dark shrink-0 size-12">
+<span class="material-symbols-outlined text-success">receipt_long</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-base font-medium leading-normal line-clamp-1">Invoice #CHIRO-0280</p>
+<p class="text-sm font-normal leading-normal line-clamp-2 text-text-light/70 dark:text-text-dark/70">Service Date: 01 July 2024</p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<p class="font-bold">$75.00</p>
+<div class="flex items-center justify-center rounded-full px-2 py-0.5 mt-1 bg-success/10">
+<p class="text-success text-xs font-medium">Paid</p>
+</div>
+</div>
+</div>
+<!-- ListItem Paid -->
+<div class="flex items-center gap-4 bg-white dark:bg-secondary-dark p-3 rounded-lg min-h-[72px] justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-secondary-light dark:bg-background-dark shrink-0 size-12">
+<span class="material-symbols-outlined text-success">receipt_long</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-base font-medium leading-normal line-clamp-1">Invoice #CHIRO-0275</p>
+<p class="text-sm font-normal leading-normal line-clamp-2 text-text-light/70 dark:text-text-dark/70">Service Date: 15 June 2024</p>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<p class="font-bold">$75.00</p>
+<div class="flex items-center justify-center rounded-full px-2 py-0.5 mt-1 bg-success/10">
+<p class="text-success text-xs font-medium">Paid</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Saved Payment Methods Section -->
+<section class="mt-8 mb-8">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Saved Payment Methods</h2>
+<div class="flex flex-col gap-2 mt-4">
+<!-- Payment Method Item -->
+<div class="flex items-center gap-4 bg-white dark:bg-secondary-dark p-3 rounded-lg min-h-[72px] justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-lg bg-secondary-light dark:bg-background-dark shrink-0 size-12">
+<svg class="fill-current text-text-light dark:text-text-dark" height="32" viewbox="0 0 384 512" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 40c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm168 432c0 4.4-3.6 8-8 8H48c-4.4 0-8-3.6-8-8V112c0-4.4 3.6-8 8-8h48v32c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32V104h48c4.4 0 8 3.6 8 8v352z"></path></svg>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-base font-medium leading-normal line-clamp-1">Visa ending in 4242</p>
+<p class="text-sm font-normal leading-normal line-clamp-2 text-text-light/70 dark:text-text-dark/70">Expires 12/26</p>
+</div>
+</div>
+<button class="flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-text-light/50 dark:text-text-dark/50">more_horiz</span>
+</button>
+</div>
+</div>
+<button class="flex w-full mt-4 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-4 bg-secondary-light dark:bg-secondary-dark text-text-light dark:text-text-dark text-base font-medium leading-normal">
+<span class="material-symbols-outlined">add</span>
+<span class="truncate">Add New Card</span>
+</button>
+</section>
+</main>
+</div>
+</body></html>

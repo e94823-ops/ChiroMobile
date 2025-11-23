@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Symptom Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#11b4d4",
+              "background-light": "#f6f8f8",
+              "background-dark": "#101f22",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d191b] dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center p-4 pb-2 justify-between sticky top-0 z-10 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-[#0d191b] dark:text-gray-200">arrow_back</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Symptom Tracker</h2>
+<div class="w-12"></div> <!-- Spacer -->
+</div>
+<main class="flex-1 px-4 pt-2 pb-28">
+<!-- Date Picker ListItem -->
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark/50 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">calendar_today</span>
+</div>
+<p class="text-base font-medium leading-normal flex-1 truncate">Tuesday, 23 July</p>
+<div class="shrink-0">
+<div class="flex size-7 items-center justify-center text-[#0d191b] dark:text-gray-200">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Overall Pain Level Section -->
+<div class="mt-8">
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">Overall Pain Level</h3>
+<div class="w-full bg-white dark:bg-background-dark/50 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+<div class="flex justify-between text-2xl mb-3">
+<span class="transition-transform duration-300 scale-125" data-alt="Smiling face emoji">😊</span>
+<span data-alt="Neutral face emoji">😐</span>
+<span data-alt="Frowning face emoji">😟</span>
+<span data-alt="Pained face emoji">😣</span>
+<span data-alt="Crying face emoji">😭</span>
+</div>
+<div class="relative flex w-full flex-col items-start justify-between gap-3">
+<div class="flex w-full shrink-[3] items-center justify-between">
+<p class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-400">0 - No Pain to 10 - Severe Pain</p>
+<p class="text-base font-bold text-primary">4</p>
+</div>
+<div class="flex h-4 w-full items-center gap-4">
+<div class="flex h-2 flex-1 rounded-full bg-gray-200 dark:bg-gray-700">
+<div class="h-full rounded-full bg-primary" style="width: 36%;"></div>
+<div class="relative">
+<div class="absolute -left-2.5 -top-2 size-6 rounded-full bg-white dark:bg-gray-300 border-2 border-primary shadow-md"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Where does it hurt? Section -->
+<div class="mt-8">
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">Where does it hurt?</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-4 -mt-2">Tap the diagram to mark areas of discomfort.</p>
+<div class="bg-white dark:bg-background-dark/50 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+<div class="flex justify-around items-center space-x-2">
+<!-- Front View -->
+<div class="relative flex-1">
+<img class="w-full h-auto text-gray-300 dark:text-gray-600" data-alt="Anatomical diagram of the front of a human body." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Qble6LZL39-EG0zNTeJF7MrhwD9fhoCCw0VEG0g05jLjx7hTUW9FoiMSNcfWtZKVvpAuvY0EL0gS7Y1hABLjjGq25vMEXfvokEeoK5U6iYqaQQs8rkLtEyrXFtoK321C8FT_H-jR7SvYaQI1MFfXUbL4l5KsbDAp9x946pqF0ZsAiCk0H6DhZFjMDRfuwRlu1_CK1gCFgtrUxgwsvxeLx5VD_UMOtxvWAAhDHTmPLOupMh9HFMbVDewCuJwO_0cBLwExoxTb-uhv"/>
+<div class="absolute rounded-full bg-red-500/80 size-4" style="top: 28%; left: 52%;"></div>
+<div class="absolute rounded-full bg-red-500/80 size-3" style="top: 45%; left: 38%;"></div>
+<p class="text-center text-sm font-medium mt-2 text-gray-600 dark:text-gray-400">Front</p>
+</div>
+<!-- Back View -->
+<div class="relative flex-1">
+<img class="w-full h-auto text-gray-300 dark:text-gray-600" data-alt="Anatomical diagram of the back of a human body." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQRdwXJonh2Gzwtgl_CLqZT1uxBfVrUMGcZ21EO1EjZ4bufGrDF214EmPdiyGs9vOR9T0mc6L9sEBLDAnyXjjOrCF5L2C9WS0H9i6GaI9ztezLYBpaqRH5GHl97wxrQ523UQpjEvWazULNP0GqBWhvfJ3cMOmbRi3T0x3TKNdLTJPmA0k3fwF43x3hC8IdlPR-JnX159ylt7KgJs46P6Dsokp2stpI7A2ZkUEwAHcKPvYF4913sONCVS7XIYduxygoIwSe8Mh5YJFr"/>
+<div class="absolute rounded-full bg-red-500/80 size-5" style="top: 32%; left: 48%;"></div>
+<p class="text-center text-sm font-medium mt-2 text-gray-600 dark:text-gray-400">Back</p>
+</div>
+</div>
+</div>
+</div>
+<!-- What are your symptoms? Section -->
+<div class="mt-8">
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">What are your symptoms?</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-primary text-white border border-transparent">Stiffness</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-primary/20 text-primary dark:bg-primary/30 dark:text-primary-100 border border-transparent">Sharp Pain</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 border border-transparent">Numbness</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 border border-transparent">Headache</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 border border-transparent">Dull Ache</button>
+<button class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 border border-transparent">Tingling</button>
+</div>
+</div>
+<!-- Additional Notes Section -->
+<div class="mt-8">
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">Additional Notes</h3>
+<textarea class="w-full rounded-xl border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark/50 p-4 text-base focus:ring-primary focus:border-primary shadow-sm" placeholder="e.g., Pain is worse when sitting for a long time." rows="4"></textarea>
+</div>
+</main>
+<!-- CTA Button -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent">
+<button class="w-full bg-primary text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark transition-colors duration-200">Save Entry</button>
+</div>
+</div>
+</body></html>

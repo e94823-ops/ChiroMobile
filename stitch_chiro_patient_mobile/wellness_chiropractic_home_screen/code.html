@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chiropractic Clinic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#11b4d4",
+              "background-light": "#f6f8f8",
+              "background-dark": "#101f22",
+              "text-light": "#0d191b",
+              "text-dark": "#e0e6e7",
+              "card-light": "#ffffff",
+              "card-dark": "#1a2c30",
+              "border-light": "#e0e6e7",
+              "border-dark": "#2a3f44",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.75rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .group[data-state='open'] .group-data-\[state\=open\]\:rotate-180 {
+        transform: rotate(180deg);
+      }
+      .group[data-state='closed'] .group-data-\[state\=open\]\:rotate-180 {
+        transform: rotate(0deg);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-primary text-3xl">spa</span>
+</div>
+<h1 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Wellness Clinic</h1>
+<div class="flex w-12 items-center justify-end">
+<a class="text-primary text-base font-bold leading-normal tracking-[0.015em] shrink-0" href="#">Log In</a>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex flex-col gap-5 pb-10">
+<!-- Hero Section -->
+<div class="@container">
+<div class="px-4 pt-3 pb-0">
+<div class="bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-xl min-h-80" data-alt="A person feeling relieved and happy in a calm, well-lit room, representing a positive patient outcome." style='background-image: linear-gradient(0deg, rgba(13, 25, 27, 0.6) 0%, rgba(13, 25, 27, 0) 40%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKzXGPrfyR29N8D2oqzwhkJtaBlo7Hz58yvHaRJSzb_pj2xTnpf5k7BH9gG2pnyCmn8J5VswCClXyBB5DVB_eV6Vow747x6Fs6Umur5I_MZ_NCln_h8AUZxrw1xgpRIgJOgxITTSqLplBIyKWzt33ryhNwhi6LkHhPdWAuIBy-iBfqNxSPI5d7Y9wUUCY8yrsT8004PGv1MekcAzaxIbVUNXZLejMo8U8MOuiwSyGBNONB-pwYW9_szAxonD8FxaFxkwsE2GBnv2Es");'>
+<div class="flex p-6">
+<p class="text-white tracking-light text-[28px] font-bold leading-tight">Your Path to a Pain-Free Life</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sub-headline -->
+<p class="text-text-light/80 dark:text-text-dark/80 text-base font-normal leading-normal px-4 text-center">Expert chiropractic care to help you move and feel your best.</p>
+<!-- Primary CTA -->
+<div class="flex px-4 py-1">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 flex-1 bg-primary text-text-light text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Book An Appointment</span>
+</button>
+</div>
+<!-- Spacer -->
+<div class="h-5"></div>
+<!-- Services Section -->
+<section class="flex flex-col gap-4 px-4">
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] px-0 pb-0 pt-0">How We Can Help</h2>
+<div class="grid grid-cols-2 gap-4">
+<!-- Service 1 -->
+<div class="flex flex-col items-center gap-3 rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 text-center">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20">
+<span class="material-symbols-outlined text-primary text-2xl">self_improvement</span>
+</div>
+<h3 class="font-bold text-base leading-tight text-text-light dark:text-text-dark">Spinal Adjustments</h3>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">Align your spine to relieve pain and improve function.</p>
+</div>
+<!-- Service 2 -->
+<div class="flex flex-col items-center gap-3 rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 text-center">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20">
+<span class="material-symbols-outlined text-primary text-2xl">sports_gymnastics</span>
+</div>
+<h3 class="font-bold text-base leading-tight text-text-light dark:text-text-dark">Sports Therapy</h3>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">Recover from injuries and enhance athletic performance.</p>
+</div>
+<!-- Service 3 -->
+<div class="flex flex-col items-center gap-3 rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 text-center">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20">
+<span class="material-symbols-outlined text-primary text-2xl">relax</span>
+</div>
+<h3 class="font-bold text-base leading-tight text-text-light dark:text-text-dark">Massage Therapy</h3>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">Reduce muscle tension and promote deep relaxation.</p>
+</div>
+<!-- Service 4 -->
+<div class="flex flex-col items-center gap-3 rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 text-center">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20">
+<span class="material-symbols-outlined text-primary text-2xl">elderly</span>
+</div>
+<h3 class="font-bold text-base leading-tight text-text-light dark:text-text-dark">Wellness Care</h3>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">Maintain your health with preventative adjustments.</p>
+</div>
+</div>
+</section>
+<!-- Spacer -->
+<div class="h-5"></div>
+<!-- Clinic Information Section -->
+<section class="flex flex-col gap-4 px-4">
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em]">Visit Our Clinic</h2>
+<div class="flex flex-col gap-3 rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4">
+<a class="flex items-center gap-4 py-2" href="#">
+<span class="material-symbols-outlined text-primary text-2xl">location_on</span>
+<div class="flex-1">
+<p class="font-medium">123 Wellness Lane</p>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">Healthville, ST 12345</p>
+</div>
+<span class="material-symbols-outlined text-text-light/50 dark:text-text-dark/50 text-2xl">chevron_right</span>
+</a>
+<hr class="border-border-light dark:border-border-dark"/>
+<a class="flex items-center gap-4 py-2" href="#">
+<span class="material-symbols-outlined text-primary text-2xl">call</span>
+<div class="flex-1">
+<p class="font-medium">(123) 456-7890</p>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">Tap to call us</p>
+</div>
+<span class="material-symbols-outlined text-text-light/50 dark:text-text-dark/50 text-2xl">chevron_right</span>
+</a>
+<hr class="border-border-light dark:border-border-dark"/>
+<div class="flex items-center gap-4 py-2">
+<span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+<div class="flex-1">
+<p class="font-medium">Mon - Fri: 9am - 6pm</p>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">Sat: 10am - 2pm, Sun: Closed</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Spacer -->
+<div class="h-5"></div>
+<!-- FAQ Section -->
+<section class="flex flex-col gap-4 px-4">
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em]">Have Questions?</h2>
+<div class="flex flex-col gap-2">
+<!-- FAQ 1 -->
+<details class="group rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark" data-state="closed">
+<summary class="flex cursor-pointer list-none items-center justify-between p-4 font-medium text-text-light dark:text-text-dark">
+                            What should I expect on my first visit?
+                            <span class="material-symbols-outlined transition-transform duration-300 group-data-[state=open]:rotate-180">expand_more</span>
+</summary>
+<p class="px-4 pb-4 text-text-light/80 dark:text-text-dark/80">Your first visit includes a thorough consultation, a physical examination, and your first adjustment. We'll discuss your health history and goals to create a personalized treatment plan for you.</p>
+</details>
+<!-- FAQ 2 -->
+<details class="group rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark" data-state="closed">
+<summary class="flex cursor-pointer list-none items-center justify-between p-4 font-medium text-text-light dark:text-text-dark">
+                            Do you accept insurance?
+                            <span class="material-symbols-outlined transition-transform duration-300 group-data-[state=open]:rotate-180">expand_more</span>
+</summary>
+<p class="px-4 pb-4 text-text-light/80 dark:text-text-dark/80">We accept a wide range of insurance plans. Please contact our office with your insurance information, and we'll be happy to verify your coverage before your appointment.</p>
+</details>
+<!-- FAQ 3 -->
+<details class="group rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark" data-state="closed">
+<summary class="flex cursor-pointer list-none items-center justify-between p-4 font-medium text-text-light dark:text-text-dark">
+                            How long does an appointment take?
+                            <span class="material-symbols-outlined transition-transform duration-300 group-data-[state=open]:rotate-180">expand_more</span>
+</summary>
+<p class="px-4 pb-4 text-text-light/80 dark:text-text-dark/80">Your initial consultation may take up to an hour. Subsequent appointments are typically shorter, lasting around 15-20 minutes, depending on your specific treatment plan.</p>
+</details>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="mt-auto bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark px-4 pt-8 pb-12">
+<div class="flex flex-col items-center gap-4 text-center">
+<div class="flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">spa</span>
+</div>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">© 2024 Wellness Clinic. All Rights Reserved.</p>
+<div class="flex gap-4">
+<a class="text-sm text-primary hover:underline" href="#">Privacy Policy</a>
+<a class="text-sm text-primary hover:underline" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

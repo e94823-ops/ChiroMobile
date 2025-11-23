@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>New Message</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#11b4d4",
+            "background-light": "#f6f8f8",
+            "background-dark": "#101f22",
+            "text-dark": "#101f22",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light group/design-root overflow-x-hidden" style="--select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(100,116,139)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');">
+<div class="flex flex-col h-full min-h-screen">
+<header class="flex items-center bg-background-light p-4 pb-2 justify-between sticky top-0 z-10">
+<button class="text-text-dark flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">New Message</h1>
+</header>
+<main class="flex-grow p-4 space-y-6">
+<div class="flex max-w-[480px] flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-text-dark text-base font-medium leading-normal pb-2">To</p>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-300 bg-white focus:border-primary h-14 bg-[image:--select-button-svg] bg-no-repeat bg-[center_right_1rem] appearance-none placeholder:text-slate-400 p-[15px] text-base font-normal leading-normal">
+<option value="">Select a recipient</option>
+<option value="front_desk">Front Desk / Scheduling</option>
+<option value="billing">Billing Department</option>
+<option value="dr_smith">Dr. Smith</option>
+<option value="dr_jones">Dr. Jones</option>
+<option value="general">General Inquiry</option>
+</select>
+</label>
+</div>
+<div class="flex max-w-[480px] flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-text-dark text-base font-medium leading-normal pb-2">Subject</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-300 bg-white focus:border-primary h-14 placeholder:text-slate-400 p-[15px] text-base font-normal leading-normal" placeholder="Enter message subject" value=""/>
+</label>
+</div>
+<div class="flex max-w-[480px] flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-text-dark text-base font-medium leading-normal pb-2">Message</p>
+<div class="relative w-full">
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-300 bg-white focus:border-primary min-h-48 placeholder:text-slate-400 p-[15px] text-base font-normal leading-normal" placeholder="Type your message here..."></textarea>
+<button class="absolute bottom-3 right-3 text-slate-500 hover:text-text-dark transition-colors p-2 rounded-full hover:bg-black/5">
+<span class="material-symbols-outlined text-2xl">attach_file</span>
+</button>
+</div>
+</label>
+</div>
+</main>
+<footer class="sticky bottom-0 p-4 bg-background-light">
+<div class="flex">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 flex-1 bg-primary text-white gap-2 pl-5 text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined">send</span>
+<span class="truncate">Send</span>
+</button>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clinic Messaging App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#11b4d4",
+            "background-light": "#f6f8f8",
+            "background-dark": "#101f22",
+            "text-light": "#0d191b",
+            "text-dark": "#f0f5f6",
+            "text-muted-light": "#4c8d9a",
+            "text-muted-dark": "#a0b8bd",
+            "surface-light": "#ffffff",
+            "surface-dark": "#182c30",
+            "border-light": "#e3e9ea",
+            "border-dark": "#2c4044",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex items-center justify-between border-b border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark/80 px-4 py-3 backdrop-blur-sm">
+<div class="flex size-12 shrink-0 items-center justify-start text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</div>
+<h2 class="flex-1 text-center text-lg font-bold leading-tight tracking-[-0.015em] text-text-light dark:text-text-dark">Messages</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex h-12 max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-transparent p-0 text-base font-bold leading-normal tracking-[0.015em] text-text-light dark:text-text-dark min-w-0">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+</div>
+</div>
+<!-- Message List -->
+<main class="flex-1 pb-28">
+<!-- Unread Indicator Section -->
+<div class="px-4 pt-4 pb-2">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark">Unread</h3>
+</div>
+<!-- List Item 1 (Unread) -->
+<div class="flex cursor-pointer items-center gap-4 bg-background-light dark:bg-background-dark px-4 py-3 hover:bg-black/5 dark:hover:bg-white/5">
+<div class="relative">
+<div class="h-14 w-14 rounded-full bg-cover bg-center bg-no-repeat" data-alt="Portrait of Dr. Evelyn Reed" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASCIwTz4mfx183ZCvvul5VVCVx_KEow7g2lA9z-VQkJUlwPdrUGJfO8RCxjAVP3nDc4AF05c1vRBQRtT-nJ2UXbTmUpyswETHc_FX8qkiQlpxbDoVDMNQRFI5kCpKu399MZLZ2OqpH8kMYJajWXubrnit7FhfFm_32FWjFP2jtVCqhgip7w6sY32LxFQPzaJuZ6XmLyYSseHPnBxcBp2pi6WWY1R-ZEflQaZAJnrigUk0deL3pmFkpq9tBQo-rUfs2ymfBMw5NJbtp');"></div>
+<span class="absolute bottom-0 right-0 block h-3.5 w-3.5 rounded-full border-2 border-background-light dark:border-background-dark bg-primary"></span>
+</div>
+<div class="flex-1 overflow-hidden">
+<div class="flex items-center justify-between">
+<p class="truncate text-base font-semibold text-text-light dark:text-text-dark">Dr. Evelyn Reed</p>
+<p class="shrink-0 text-sm font-medium text-primary">10:42 AM</p>
+</div>
+<div class="flex items-start justify-between gap-4">
+<p class="mt-1 line-clamp-2 text-sm font-medium text-text-light dark:text-text-dark">Sounds good, I'll see you then.</p>
+<div class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">1</div>
+</div>
+</div>
+</div>
+<!-- Divider -->
+<div class="mx-4 my-2 border-t border-border-light dark:border-border-dark"></div>
+<!-- Recent Messages Section -->
+<div class="px-4 pt-2 pb-2">
+<h3 class="text-sm font-semibold uppercase tracking-wider text-text-muted-light dark:text-text-muted-dark">Recent</h3>
+</div>
+<!-- List Item 2 -->
+<div class="flex cursor-pointer items-center gap-4 bg-background-light dark:bg-background-dark px-4 py-3 hover:bg-black/5 dark:hover:bg-white/5">
+<div class="relative">
+<div class="h-14 w-14 rounded-full bg-cover bg-center bg-no-repeat" data-alt="Image of a modern clinic reception area" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdqA324axRkj0V-nGLvMFjCRFe5qVoeGOe53kSlk6LBqQgX3bAm4SbPoGrWUEHmPyBkXzTgYFE1SSlp2ZjA_K4uNpzwiABHwgctPtR0I2VYM_ClUMzhWpuoVxslF1IjI-bNkHSwzinzZAnFfDEpYXAWxUEH95p0xWdtRU4n6E3-cHzvGJCzuWzGX06f8y4FjaCKGWnIoEEDx88q3Savnx-hDkUBp7KgDsDQNtHm1D4tInyzSRJLzKCHT3qAaJbkwP8JDJX7UyauQeL');"></div>
+</div>
+<div class="flex-1 overflow-hidden">
+<div class="flex items-center justify-between">
+<p class="truncate text-base font-medium text-text-light dark:text-text-dark">Clinic Front Desk</p>
+<p class="shrink-0 text-sm text-text-muted-light dark:text-text-muted-dark">Yesterday</p>
+</div>
+<p class="mt-1 line-clamp-2 text-sm text-text-muted-light dark:text-text-muted-dark">Reminder: Your next appointment is scheduled for...</p>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex cursor-pointer items-center gap-4 bg-background-light dark:bg-background-dark px-4 py-3 hover:bg-black/5 dark:hover:bg-white/5">
+<div class="relative">
+<div class="h-14 w-14 rounded-full bg-cover bg-center bg-no-repeat" data-alt="Portrait of Dr. Smith" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBPKx7zQ4I-3KVI14HO0MTUg-mSVgz9x8Dm_sbalcb6l4HyCP-Nhvr9zVqmvo1L9weTdqaxBkfzViINKMvq-pPKkt6xDLXajla1P2zJaYw3sgJTEGbVuJyzZuYHlTgOmxyLUyZxToqNH5weplYHIRegbYaPV1GvAPevrMfrxqWSjw5GhO5fuHQ5pUp9n7N3Fsc5PLlduCs78pGO92mWV3AQB0kYhTREJLfNnhj_ukyURPI9lRHVU4xS4vbkj-37DaQ0MY0cldeJk12e');"></div>
+</div>
+<div class="flex-1 overflow-hidden">
+<div class="flex items-center justify-between">
+<p class="truncate text-base font-medium text-text-light dark:text-text-dark">Dr. Smith</p>
+<p class="shrink-0 text-sm text-text-muted-light dark:text-text-muted-dark">Mon</p>
+</div>
+<p class="mt-1 line-clamp-2 text-sm text-text-muted-light dark:text-text-muted-dark">Please find the attached documents for your review.</p>
+</div>
+</div>
+<!-- List Item 4 -->
+<div class="flex cursor-pointer items-center gap-4 bg-background-light dark:bg-background-dark px-4 py-3 hover:bg-black/5 dark:hover:bg-white/5">
+<div class="relative">
+<div class="flex h-14 w-14 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">local_pharmacy</span>
+</div>
+</div>
+<div class="flex-1 overflow-hidden">
+<div class="flex items-center justify-between">
+<p class="truncate text-base font-medium text-text-light dark:text-text-dark">Pharmacy Bot</p>
+<p class="shrink-0 text-sm text-text-muted-light dark:text-text-muted-dark">Oct 28</p>
+</div>
+<p class="mt-1 line-clamp-2 text-sm text-text-muted-light dark:text-text-muted-dark">Your prescription is ready for pickup.</p>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<div class="fixed bottom-0 right-0 p-6">
+<button class="flex h-16 w-16 cursor-pointer items-center justify-center gap-4 overflow-hidden rounded-xl bg-primary text-white shadow-lg transition-all hover:bg-primary/90 focus:outline-none focus:ring-4 focus:ring-primary/40 md:w-auto md:px-6 md:pl-4">
+<span class="material-symbols-outlined text-3xl">edit</span>
+<span class="hidden truncate text-base font-bold leading-normal tracking-[0.015em] md:inline">Compose</span>
+</button>
+</div>
+</div>
+</body></html>

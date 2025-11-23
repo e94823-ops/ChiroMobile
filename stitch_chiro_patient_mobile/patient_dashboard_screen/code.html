@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Patient Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#82AAE3", // Soft Blue
+            "accent": "#76B947", // Muted Green
+            "background-light": "#F9F9F9",
+            "background-dark": "#101f22",
+            "text-light": "#333333",
+            "text-dark": "#F9F9F9",
+            "text-secondary-light": "#555555",
+            "text-secondary-dark": "#A0D2EB",
+            "card-light": "#FFFFFF",
+            "card-dark": "#1A2E33"
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.75rem", // 12px
+            "lg": "1rem", // 16px
+            "xl": "1.5rem", // 24px
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center text-accent" data-icon="Spa" data-size="24px" data-weight="regular">
+<span class="material-symbols-outlined text-4xl">spa</span>
+</div>
+<h1 class="text-xl font-bold leading-tight tracking-tight flex-1">Hello, Jane</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 bg-transparent text-text-light dark:text-text-dark gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex flex-col gap-4 p-4 pb-24">
+<!-- Upcoming Appointment Card -->
+<section class="flex flex-col items-stretch justify-start rounded-xl shadow-sm bg-card-light dark:bg-card-dark overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[21/9] bg-cover" data-alt="Abstract calming blue and green waves pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAH-j2Eyzfm871Lac1iHWM_IrW9YaKnhO_wQyUCsaV0Tdvt4FA1Gm7HDRtYuWUsmFb3LcLv5A_7l1Gvr9Hbg_6qmIPeuLe8R6_AhukXrT9vACtOH0dEyN_ZapIB0T9LFN7rCH8ObeOCu1cbm_beL4K6Ofii0SMNNc_F3jVhKdkZUYFOmkcWKGarDoupYkcbCJ26aTmZA4eCzVDUmzXblkGoRWxpre-B0zFS3PUXtvoIV6wVgHEb3WjvpiKqCRsafoac1-uur5MV-gF-');"></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-4 p-4">
+<div>
+<p class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">Your Next Appointment</p>
+<p class="text-xl font-bold leading-tight tracking-tight text-text-light dark:text-text-dark">Tuesday, Sep 26 at 10:30 AM</p>
+</div>
+<div class="flex items-end gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-base font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">with Dr. Evelyn Reed</p>
+<p class="text-base font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">Chiropractic Adjustment</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-accent text-white text-sm font-medium leading-normal">
+<span class="truncate">View Details</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Grid for smaller cards -->
+<div class="grid grid-cols-1 @md:grid-cols-2 gap-4">
+<!-- Recent Messages Card -->
+<section class="flex items-stretch justify-between gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">
+<div class="flex flex-[2_2_0px] flex-col gap-4 justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-base font-bold leading-tight">Recent Messages</p>
+<p class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">You have 2 unread messages.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary/20 dark:bg-primary/30 text-text-light dark:text-text-dark text-sm font-medium leading-normal w-fit">
+<span class="truncate">View All</span>
+</button>
+</div>
+<div class="flex items-center justify-center flex-1">
+<div class="flex items-center justify-center bg-primary/20 dark:bg-primary/30 text-primary dark:text-text-dark rounded-full size-16">
+<span class="material-symbols-outlined text-4xl">mark_email_unread</span>
+</div>
+</div>
+</section>
+<!-- Outstanding Balance Card -->
+<section class="flex items-stretch justify-between gap-4 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">
+<div class="flex flex-[2_2_0px] flex-col gap-4 justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-base font-bold leading-tight">Your Balance: $75.00</p>
+<p class="text-sm font-normal leading-normal text-text-secondary-light dark:text-text-secondary-dark">Due by Oct 1, 2023</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-accent text-white text-sm font-medium leading-normal w-fit">
+<span class="truncate">Pay Now</span>
+</button>
+</div>
+<div class="flex items-center justify-center flex-1">
+<div class="flex items-center justify-center bg-accent/20 dark:bg-accent/30 text-accent dark:text-accent rounded-full size-16">
+<span class="material-symbols-outlined text-4xl">payments</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Quick Actions -->
+<section class="flex flex-col gap-3">
+<h2 class="text-lg font-bold leading-tight tracking-tight px-1 pt-2">Quick Actions</h2>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-center justify-center gap-2 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm h-28 text-center">
+<span class="material-symbols-outlined text-3xl text-primary">calendar_add_on</span>
+<span class="font-medium text-sm">Book Appointment</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm h-28 text-center">
+<span class="material-symbols-outlined text-3xl text-primary">call</span>
+<span class="font-medium text-sm">Contact Us</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-10 bg-white/80 dark:bg-card-dark/80 backdrop-blur-sm border-t border-gray-200 dark:border-gray-700">
+<div class="flex justify-around h-16 max-w-lg mx-auto">
+<a class="flex flex-col items-center justify-center flex-1 text-primary dark:text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined">event</span>
+<span class="text-xs">Appointments</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-xs">Messages</span>
+</a>
+<a class="flex flex-col items-center justify-center flex-1 text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

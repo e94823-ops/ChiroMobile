@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Account - Chiropractic Clinic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11b4d4",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101f22",
+                        "text-light": "#101f22",
+                        "text-dark": "#f6f8f8",
+                        "subtle-light": "#cfe3e7",
+                        "subtle-dark": "#2a3f44",
+                        "placeholder-light": "#4c8d9a",
+                        "placeholder-dark": "#a0b8bd",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center p-4">
+<span class="material-symbols-outlined text-3xl text-primary">
+                spa
+            </span>
+<h1 class="ml-2 text-xl font-bold text-text-light dark:text-text-dark">SpineAlign Clinic</h1>
+</header>
+<!-- Main Content -->
+<main class="flex flex-1 flex-col px-6 pt-8 pb-10">
+<div class="flex flex-col">
+<h2 class="text-3xl font-bold tracking-tight text-text-light dark:text-text-dark">Create Your Account</h2>
+<p class="mt-2 text-placeholder-light dark:text-placeholder-dark">Start your journey to better spinal health.</p>
+</div>
+<!-- Registration Form -->
+<form class="mt-8 flex flex-1 flex-col">
+<div class="flex flex-col gap-6">
+<!-- Full Name Field -->
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium">Full Name</p>
+<div class="relative flex w-full items-center">
+<span class="material-symbols-outlined absolute left-4 text-placeholder-light dark:text-placeholder-dark">person</span>
+<input class="form-input h-14 w-full flex-1 resize-none overflow-hidden rounded-lg border border-subtle-light bg-background-light p-[15px] pl-12 text-base font-normal leading-normal text-text-light placeholder:text-placeholder-light focus:border-primary focus:outline-0 focus:ring-0 dark:border-subtle-dark dark:bg-subtle-dark/20 dark:text-text-dark dark:placeholder:text-placeholder-dark dark:focus:border-primary" placeholder="Enter your full name" type="text" value=""/>
+</div>
+</label>
+<!-- Email Address Field -->
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium">Email Address</p>
+<div class="relative flex w-full items-center">
+<span class="material-symbols-outlined absolute left-4 text-placeholder-light dark:text-placeholder-dark">mail</span>
+<input class="form-input h-14 w-full flex-1 resize-none overflow-hidden rounded-lg border border-subtle-light bg-background-light p-[15px] pl-12 text-base font-normal leading-normal text-text-light placeholder:text-placeholder-light focus:border-primary focus:outline-0 focus:ring-0 dark:border-subtle-dark dark:bg-subtle-dark/20 dark:text-text-dark dark:placeholder:text-placeholder-dark dark:focus:border-primary" placeholder="Enter your email address" type="email" value=""/>
+</div>
+</label>
+<!-- Password Field -->
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium">Password</p>
+<div class="relative flex w-full items-center">
+<span class="material-symbols-outlined absolute left-4 text-placeholder-light dark:text-placeholder-dark">lock</span>
+<input class="form-input h-14 w-full flex-1 resize-none overflow-hidden rounded-lg border border-subtle-light bg-background-light p-[15px] pl-12 pr-12 text-base font-normal leading-normal text-text-light placeholder:text-placeholder-light focus:border-primary focus:outline-0 focus:ring-0 dark:border-subtle-dark dark:bg-subtle-dark/20 dark:text-text-dark dark:placeholder:text-placeholder-dark dark:focus:border-primary" placeholder="Enter your password" type="password" value=""/>
+<button class="absolute right-4 text-placeholder-light dark:text-placeholder-dark" type="button">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+</label>
+<!-- Confirm Password Field -->
+<label class="flex flex-col">
+<p class="pb-2 text-sm font-medium">Confirm Password</p>
+<div class="relative flex w-full items-center">
+<span class="material-symbols-outlined absolute left-4 text-placeholder-light dark:text-placeholder-dark">lock</span>
+<input class="form-input h-14 w-full flex-1 resize-none overflow-hidden rounded-lg border border-subtle-light bg-background-light p-[15px] pl-12 pr-12 text-base font-normal leading-normal text-text-light placeholder:text-placeholder-light focus:border-primary focus:outline-0 focus:ring-0 dark:border-subtle-dark dark:bg-subtle-dark/20 dark:text-text-dark dark:placeholder:text-placeholder-dark dark:focus:border-primary" placeholder="Confirm your password" type="password" value=""/>
+<button class="absolute right-4 text-placeholder-light dark:text-placeholder-dark" type="button">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+</label>
+</div>
+<!-- Terms of Service Checkbox -->
+<div class="mt-6 flex items-start space-x-3">
+<input class="form-checkbox mt-0.5 h-5 w-5 rounded border-subtle-light bg-background-light text-primary focus:ring-primary/50 dark:border-subtle-dark dark:bg-subtle-dark/20 dark:checked:bg-primary dark:focus:ring-offset-background-dark" id="terms" name="terms" type="checkbox"/>
+<div class="text-sm">
+<label class="text-text-light dark:text-text-dark" for="terms">I agree to the <a class="font-medium text-primary hover:underline" href="#">Terms of Service</a> &amp; <a class="font-medium text-primary hover:underline" href="#">Privacy Policy</a>.</label>
+</div>
+</div>
+<div class="flex-grow"></div>
+<!-- Action Buttons -->
+<div class="mt-10 flex flex-col items-center gap-4">
+<button class="flex h-14 w-full items-center justify-center rounded-lg bg-primary px-6 text-base font-semibold text-white transition-colors hover:bg-primary/90" type="submit">Create Account</button>
+<p class="text-sm">
+                        Already have an account? 
+                        <a class="font-semibold text-primary hover:underline" href="#">Log In</a>
+</p>
+</div>
+</form>
+</main>
+</div>
+</body></html>

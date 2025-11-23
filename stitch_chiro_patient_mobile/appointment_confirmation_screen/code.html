@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Appointment Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2563EB", // New primary blue color
+            "background-light": "#F7F8FA", // Light gray background
+            "background-dark": "#121212",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light group/design-root overflow-x-hidden">
+<div class="flex items-center bg-background-light p-4 justify-end">
+<div class="text-gray-800 flex size-10 shrink-0 items-center justify-center rounded-full bg-gray-100">
+<span class="material-symbols-outlined text-gray-600" style="font-size: 24px;">close</span>
+</div>
+</div>
+<div class="flex flex-col items-center px-4 pt-8 pb-6">
+<div class="flex h-20 w-20 items-center justify-center rounded-full bg-primary mb-6">
+<span class="material-symbols-outlined text-white" style="font-size: 48px;">check</span>
+</div>
+<h1 class="text-gray-900 tracking-tight text-[32px] font-bold leading-tight text-center pb-2">Appointment Confirmed!</h1>
+<p class="text-gray-600 text-base font-normal leading-normal text-center max-w-sm">Your appointment is set. We look forward to seeing you.</p>
+</div>
+<div class="mx-4 my-4 flex flex-col gap-2 rounded-xl bg-white p-4 shadow-sm">
+<div class="flex items-center gap-4 py-3">
+<div class="text-gray-600 flex items-center justify-center rounded-full bg-gray-100 shrink-0 size-10">
+<span class="material-symbols-outlined text-xl">self_improvement</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-gray-500 text-sm font-normal leading-normal line-clamp-2">Service</p>
+<p class="text-gray-800 text-base font-medium leading-normal line-clamp-1">Standard Adjustment</p>
+</div>
+</div>
+<div class="h-px w-full bg-gray-200"></div>
+<div class="flex items-center gap-4 py-3">
+<div class="text-gray-600 flex items-center justify-center rounded-full bg-gray-100 shrink-0 size-10">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-gray-500 text-sm font-normal leading-normal line-clamp-2">Date &amp; Time</p>
+<p class="text-gray-800 text-base font-medium leading-normal line-clamp-1">Monday, Oct 28, 2024 at 10:30 AM</p>
+</div>
+</div>
+<div class="h-px w-full bg-gray-200"></div>
+<div class="flex items-center gap-4 py-3">
+<div class="flex items-center justify-center rounded-full bg-gray-100 shrink-0 size-10">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover aspect-auto rounded-full" data-alt="Headshot of Dr. Evelyn Reed" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdOOvkMUqdbSo3lTC4NJzk_BzLtZvITpMd-hfOVWtdtwQ45k8URjjR8w0LHBI4XUWK2yv1zr_QMR3RgqK2MnY0q2IA450Hrp8Qw0XFxt4Wy7IIyZ5lO22XvTbDwnD1AG9lpOmzfHzPMScR7K4GQ6EY1YFJfHHKtK0tupyuiPsOnH9-V0wzWeRqqqoZfiYK_a3wrT1hWVbfTZo-lmRlQ6aTnEb28Rcm8RdVOJV3W6Mcakn08krpC37a5iOOW5QknNRjd0XX4U1EBkHD");'></div>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-gray-500 text-sm font-normal leading-normal line-clamp-2">Practitioner</p>
+<p class="text-gray-800 text-base font-medium leading-normal line-clamp-1">Dr. Evelyn Reed</p>
+</div>
+</div>
+<div class="h-px w-full bg-gray-200"></div>
+<div class="flex items-center gap-4 py-3">
+<div class="text-gray-600 flex items-center justify-center rounded-full bg-gray-100 shrink-0 size-10">
+<span class="material-symbols-outlined text-xl">location_on</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-gray-500 text-sm font-normal leading-normal line-clamp-2">Location</p>
+<p class="text-gray-800 text-base font-medium leading-normal line-clamp-1">123 Wellness Lane, Suite 100</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 px-4 pt-4 grow">
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3 text-base font-bold text-white">
+<span class="material-symbols-outlined text-xl">add_to_photos</span>
+        Add to Calendar
+      </button>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-100 px-4 py-3 text-base font-medium text-primary">
+<span class="material-symbols-outlined text-xl">directions</span>
+        Get Directions
+      </button>
+</div>
+<div class="mt-auto px-4 pb-8 pt-6">
+<button class="w-full rounded-lg bg-transparent py-3 text-base font-medium text-primary">Done</button>
+</div>
+</div>
+
+</body></html>
